@@ -9,7 +9,7 @@
   <body>
     <div id="app">
       <h2>{{message}}</h2>
-      <ul>
+      <ul v-if="showList">
         <todo-item
           v-for="item in groceryList"
           v-bind:todo="item"
@@ -17,6 +17,7 @@
         >
         </todo-item>
       </ul>
+      <button v-on:click="toggleList">{{showList? "close":"open"}}</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
@@ -29,6 +30,7 @@
         el: "#app",
         data: {
           message: "Components in Veu",
+          showList: true,
           groceryList: [
             { id: 0, text: "vegetables" },
             { id: 1, text: "cheese" },
@@ -37,6 +39,11 @@
         },
         created: function () {
           console.log(this);
+        },
+        methods: {
+          toggleList() {
+            this.showList = !this.showList;
+          },
         },
       });
     </script>
