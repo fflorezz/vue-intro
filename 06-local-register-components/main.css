@@ -1,0 +1,22 @@
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.item {
+  border: 1px solid gray;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.item:not(.active):hover {
+  background-color: rgb(247, 193, 193);
+}
+
+.active {
+  background-color: red;
+}
