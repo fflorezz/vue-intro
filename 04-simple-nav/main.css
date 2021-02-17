@@ -1,0 +1,11 @@
+.active {
+  background-color: red;
+}
+.tab-item {
+  cursor: pointer;
+  padding: 2rem;
+}
+.component {
+  background-color: blueviolet;
+  height: 300px;
+}

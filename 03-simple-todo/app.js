@@ -1,12 +1,12 @@
 Vue.component("todo-item", {
-  template:
-    "\
-    <li>\
-      {{ title }}\
-      {{ date }}\
-      <button v-on:click=\"$emit('remove')\">Remove</button>\
-    </li>\
-  ",
+  template: `
+  <li>
+      {{ title }}
+      ******
+      {{ date }}
+      <button v-on:click="$emit('remove')">Remove</button>
+  </li>
+ `,
   props: ["title", "date"],
 });
 
