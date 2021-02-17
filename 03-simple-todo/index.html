@@ -20,9 +20,10 @@
       <ul>
         <li
           is="todo-item"
-          v-for="(todo, index) in todos"
+          v-for="todo in todos"
           v-bind:key="todo.id"
           v-bind:title="todo.title"
+          v-bind:date="todo.date"
           v-bind:removeTodo="removeTodo"
           v-on:remove="removeTodo(todo.id)"
         ></li>
