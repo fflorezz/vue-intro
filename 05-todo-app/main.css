@@ -1,0 +1,18 @@
+body {
+  width: 90%;
+  margin: 0 auto;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+.todo-item {
+  padding: 10px 0;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.done {
+  color: rgb(160, 160, 160);
+  text-decoration: line-through;
+}
