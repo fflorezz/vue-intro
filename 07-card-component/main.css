@@ -1,0 +1,29 @@
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.card {
+  width: 200px;
+  height: 300px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: bisque;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.card-img {
+  height: 200px;
+  object-fit: cover;
+}
+.card-title,
+.card-description {
+  text-align: center;
+}
+.card-list {
+  display: flex;
+}
