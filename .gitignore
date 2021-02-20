@@ -1,4 +1,7 @@
 node_modules/
-
 .env
 .env.test
+
+10-cli-intro/node_modules/
+10-cli-intro/.env
+10-cli-intro/.env.test
