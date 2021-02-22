@@ -31,7 +31,6 @@ export default {
       this.isDetailsVisible = !this.isDetailsVisible;
     },
     remove() {
-      console.log("emiting remove");
       this.$emit("remove-item", this.id);
     },
   },

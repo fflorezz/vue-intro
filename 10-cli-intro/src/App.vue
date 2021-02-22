@@ -1,6 +1,8 @@
 <template>
-  <AppTitle msg="Intro to Vue CLI" />
-  <AppList />
+  <div>
+    <AppTitle msg="Intro to Vue CLI" />
+    <AppList />
+  </div>
 </template>
 
 <script>
