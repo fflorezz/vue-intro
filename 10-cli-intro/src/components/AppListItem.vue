@@ -1,10 +1,11 @@
 <template>
   <li class="list-item">
     <h3>{{ name }}</h3>
+    <button @click="remove">Delete</button>
     <button @click="toggleDetails">
       {{ isDetailsVisible ? "Hide" : "Show" }} Details
     </button>
-    <ul v-if="isDetailsVisible">
+    <ul v-show="isDetailsVisible">
       <li><strong>Phone: </strong>{{ phone }}</li>
       <li><strong>Email: </strong>{{ email }}</li>
     </ul>
@@ -15,6 +16,7 @@
 export default {
   name: "AppListItem",
   props: {
+    id: Number,
     name: String,
     phone: String,
     email: String,
@@ -28,6 +30,10 @@ export default {
     toggleDetails() {
       this.isDetailsVisible = !this.isDetailsVisible;
     },
+    remove() {
+      console.log("emiting remove");
+      this.$emit("remove-item", this.id);
+    },
   },
 };
 </script>
@@ -40,6 +46,9 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  border: 1px solid rgb(179, 179, 179);
+  padding: 20px;
+  border-radius: 10px;
 }
 ul {
   list-style-type: none;

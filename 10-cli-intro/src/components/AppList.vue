@@ -3,9 +3,11 @@
     <AppListItem
       v-for="contact in contactList"
       :key="contact.id"
+      :id="contact.id"
       :name="contact.name"
       :phone="contact.phone"
       :email="contact.email"
+      @remove-item="removeItem"
     />
   </ul>
 </template>
@@ -16,6 +18,13 @@ import AppListItem from "./AppListItem";
 export default {
   components: {
     AppListItem,
+  },
+  methods: {
+    removeItem(id) {
+      this.contactList = this.contactList.filter(
+        (contact) => contact.id !== id
+      );
+    },
   },
   data() {
     return {
