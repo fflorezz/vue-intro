@@ -5,3 +5,7 @@ node_modules/
 10-cli-intro/node_modules/
 10-cli-intro/.env
 10-cli-intro/.env.test
+
+11-learning-resources-app/node_modules/
+11-learning-resources-app/.env
+11-learning-resources-app/.env.test 
