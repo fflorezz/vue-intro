@@ -15,13 +15,13 @@ export default {
     return {
       storedResources: [
         {
-          id: 1,
+          id: new Date().toISOString(),
           title: 'Official Guide',
           description: 'The official Vue documentation',
           link: 'https://vuejs.org',
         },
         {
-          id: 2,
+          id: new Date().toISOString(),
           title: 'Official Guide',
           description: 'The official Vue documentation',
           link: 'https://vuejs.org',
@@ -34,6 +34,11 @@ export default {
       resources: this.storedResources,
       addResource: (resource) => {
         this.storedResources.unshift(resource);
+      },
+      removeResource: (id) => {
+        const res = this.storedResources.find((res) => res.id === id);
+        const resIdx = this.storedResources.indexOf(res);
+        this.storedResources.splice(resIdx, 1);
       },
     };
   },
