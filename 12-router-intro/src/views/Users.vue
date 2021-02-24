@@ -5,6 +5,7 @@
       <user-card
         v-for="user in users"
         :key="user.id"
+        :id="user.id"
         :name="user.name"
         :email="user.email"
       ></user-card>

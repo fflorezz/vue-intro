@@ -5,6 +5,7 @@
       <post-card
         v-for="post in posts"
         :key="post.id"
+        :id="post.id"
         :title="post.title"
         :body="post.body"
         :userId="post.userId"

@@ -1,14 +1,16 @@
 <template>
-  <div class="user-card">
-    <h2>{{ name }}</h2>
-    <h4>{{ email }}</h4>
-  </div>
+  <router-link :to="`/${id}`">
+    <div class="user-card">
+      <h2>{{ name }}</h2>
+      <h4>{{ email }}</h4>
+    </div>
+  </router-link>
 </template>
 
 <script>
 export default {
   name: "UserCard",
-  props: ["name", "email"],
+  props: ["name", "email", "id"],
 };
 </script>
 
@@ -18,5 +20,9 @@ export default {
   border: 1px solid gray;
   padding: 10px;
   width: 300px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 </style>
