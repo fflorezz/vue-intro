@@ -36,8 +36,7 @@ export default {
         this.storedResources.unshift(resource);
       },
       removeResource: (id) => {
-        const res = this.storedResources.find((res) => res.id === id);
-        const resIdx = this.storedResources.indexOf(res);
+        const resIdx = this.storedResources.indexOf((res) => res.id === id);
         this.storedResources.splice(resIdx, 1);
       },
     };
